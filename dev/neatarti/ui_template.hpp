@@ -16,7 +16,13 @@
         CELLSPAN(6, 2); \
         text = TEXT; \
         sizeEx = 2 * CELL_FONTSIZE; \
-        font = "EtelkaMonospaceProBold"; \
+    }
+
+#define DATALABEL(ID, IDC, X, Y, TEXT) \
+    class dlbl##ID##: GVAR(Label) { \
+        idc = IDC; \
+        CELL(X, Y); \
+        text = TEXT; \
     }
 
 #define LABEL(ID, X, Y, TEXT) \
