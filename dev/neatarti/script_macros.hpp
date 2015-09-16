@@ -3,6 +3,9 @@
 
 #include "ui_macros.hpp"
 
+// Constants
+#define PAGES ["main", "point", "line", "area"]
+
 // Functional macros
 #define DATAPATH(FILE) PATHTOF(data\FILE)
 #define QDATAPATH(FILE) QUOTE(DATAPATH(FILE))
@@ -19,3 +22,9 @@
 #define COLOR_WHITE_TR25 1,1,1,0.25
 #define COLOR_WHITE_TR50 1,1,1,0.5
 #define COLOR_WHITE 1,1,1,1
+
+// Control Types
+#define CT_TEXTBOX       2
+#define CT_COMBO         4
+#define CT_TOOLBOX       6
+#define CT_LISTNBOX      102
