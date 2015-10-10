@@ -28,5 +28,3 @@ GVAR(settingsWeapon) = 0;
 GVAR(currentAttackType) = PAGES select 0;
 
 GVAR(magazineNames) = ["MISSING SETTING"];
-
-'getNumber(_x >> "artilleryScanner") != 0' configClasses configFile >> "CfgVehicles"

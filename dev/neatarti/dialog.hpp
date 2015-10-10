@@ -6,6 +6,7 @@ class RscEdit;
 class RscCombo;
 class RscListNBox;
 class RscToolbox;
+class RscProgress;
 
 class GVAR(Label): RscText {
     idc = -1;
@@ -136,38 +137,26 @@ class GVAR(grpMain): RscControlsGroupNoScrollbars {
         };
 
         POS_INPUT(PosX,PosY,IDC_TXT_SETTINGS_POSX,IDC_TXT_SETTINGS_POSY,2,2,"POS");
-        BUTTON(SaveSettings,IDC_BTN_SETTINGS_SAVE,4,3,"Save");
         LABELED_INPUT(Height,IDC_TXT_SETTINGS_HEIGHT,2,4,"HEIGHT");
         LABELED_COMBO(Arti,IDC_CMB_SETTINGS_ARTY,3,4,"ARTILLERY");
 
-        class lblSettings : GVAR(Label) {
-            text = "Current Settings";
-            CELL(5,2);
-            CELLSPAN(2,1);
+        BUTTON(GetPosition,IDC_BTN_SETTINGS_GETPOS,4,3,"Get Pos");
+        BUTTON(SaveSettings,IDC_BTN_SETTINGS_SAVE,4,4,"Save");
+
+        class pgbLoading: RscProgress {
+            idc = IDC_PGB_LOADING;
+            colorBar[] = {COLOR_BLACK_TR50};
+
+            CELL(2,6);
+            CELLSPAN(3,1);
         };
 
-        class dlblPos : GVAR(Label) {
-            idc = IDC_DLBL_POS;
-            text = "POS: 0000 0000";
+        class lblLoading: GVAR(Label) {
+            idc = IDC_LBL_LOADING;
+            style = 0x02; // centered
 
-            CELL(5,3);
-            CELLSPAN(2,1);
-        };
-
-        class dlblHeight : GVAR(Label) {
-            idc = IDC_DLBL_HEIGHT;
-            text = "HEIGHT: 42 m";
-
-            CELL(5,4);
-            CELLSPAN(2,1);
-        };
-
-        class dlblArtillery : GVAR(Label) {
-            idc = IDC_DLBL_ARTY;
-            text = "ARTY: Mortar 82mm";
-
-            CELL(5,5);
-            CELLSPAN(2,1);
+            CELL(2,7);
+            CELLSPAN(3,1);
         };
     };
 };

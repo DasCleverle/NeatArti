@@ -11,6 +11,8 @@
 #define QDATAPATH(FILE) QUOTE(DATAPATH(FILE))
 #define FUNCFILE(CLASS) PATHTOF(functions\CLASS)
 
+#define COORDPAD(var1) ([var1, "0", 5] call FUNC(padLeft))
+
 // Colors
 #define COLOR_TR 0,0,0,0
 

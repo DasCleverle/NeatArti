@@ -3,6 +3,8 @@ class CfgFunctions {
         class common {
             file = FUNCFILE(common);
             class postInit { postInit = 1; };
+
+            class padLeft {};
         };
 
         class dialog {
@@ -14,6 +16,7 @@ class CfgFunctions {
 
             class loadSettings {};
             class saveSettings {};
+            class getPos {};
 
             class switchPage {};
 

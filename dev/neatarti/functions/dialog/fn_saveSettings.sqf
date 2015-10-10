@@ -2,9 +2,9 @@
 
 disableSerialization;
 
-params ["_control", "_weaponConfig", "_magazines"];
+params ["_control"];
 
-private ["_display", "_weaponConfig"];
+private ["_display", "_weaponConfig", "_magazines"];
 _display = ctrlParent _control;
 
 _txtSettingsPosX = _display displayCtrl IDC_TXT_SETTINGS_POSX;
