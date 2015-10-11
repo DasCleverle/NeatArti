@@ -1,0 +1,1 @@
+#include "\x\cl\addons\neatarti\script_component.hpp"

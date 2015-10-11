@@ -2,8 +2,15 @@
 
 GVAR(artyConfigs) = configProperties [configFile >> "CfgVehicles", 'isClass _x && { getNumber(_x >> "artilleryScanner") != 0 }', false];
 GVAR(artyNames) = [];
+
 GVAR(weaponConfigs) = [];
 GVAR(weaponNames) = [];
+
+GVAR(magazineConfigs) = [];
+GVAR(magazineNames) = ["MISSING SETTING"];
+
+GVAR(modeConfigs) = [];
+GVAR(modesHash) = [] call CBA_fnc_hashCreate;
 
 {
     _displayName = getText(_x >> "displayName");
@@ -25,6 +32,8 @@ GVAR(settingsPos) = [0,0];
 GVAR(settingsHeight) = 0;
 GVAR(settingsWeapon) = 0;
 
-GVAR(currentAttackType) = PAGES select 0;
+GVAR(attackType) = PAGES select 0;
 
-GVAR(magazineNames) = ["MISSING SETTING"];
+GVAR(solutionType) = SOLUTIONTYPES select 0;
+GVAR(solutionsHigh) = [];
+GVAR(solutionsLow) = [];

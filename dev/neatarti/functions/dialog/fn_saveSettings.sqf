@@ -4,7 +4,7 @@ disableSerialization;
 
 params ["_control"];
 
-private ["_display", "_weaponConfig", "_magazines"];
+private ["_display", "_weaponConfig", "_magazines", "_modes"];
 _display = ctrlParent _control;
 
 _txtSettingsPosX = _display displayCtrl IDC_TXT_SETTINGS_POSX;
@@ -20,6 +20,16 @@ GVAR(settingsWeapon) = lbCurSel _cmbSettingsWeapon;
 
 _weaponConfig = GVAR(weaponConfigs) select GVAR(settingsWeapon);
 _magazines = getArray(_weaponConfig >> "magazines");
+_modes = getArray(_weaponConfig >> "modes");
+
+GVAR(modeConfigs) = [];
+{
+    _config = _weaponConfig >> _x;
+    if(getNumber(_config >> "showToPlayer") != 0) then {
+        GVAR(modeConfigs) pushBack _config;
+    };
+} foreach _modes;
+
 GVAR(magazineConfigs) = [];
 GVAR(magazineNames) = [];
 {
