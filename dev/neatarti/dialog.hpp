@@ -167,7 +167,6 @@ class GVAR(grpPoint): RscControlsGroupNoScrollbars {
     GRP_DIM;
 
     onLoad = _this spawn FUNC(attackType_onLoad);
-    onUnload = "systemChat 'unload'";
 
     class controls {
         HEADLINE("POINT ATTACK");
@@ -243,7 +242,7 @@ class GVAR(grpArea): RscControlsGroupNoScrollbars {
 class GVAR(grpWrapper): RscControlsGroupNoScrollbars {
     idc = IDC_GRP_WRAPPER;
     GRP_POS_DIM;
-    onUnload = "systemChat 'unload'";
+
 };
 
 class GVAR(dialogArticalc) {
