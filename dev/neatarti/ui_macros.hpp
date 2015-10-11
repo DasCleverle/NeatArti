@@ -28,6 +28,7 @@
 #define IDC_LNB_SOLUTIONS       12465
 #define IDC_LBL_ERROR           12466
 #define IDC_TB_SOLUTIONTYPE     12467
+#define IDC_LBL_MODE            12468
 
 // POINT ATTACK
 #define IDC_TXT_TPOSX           12501
