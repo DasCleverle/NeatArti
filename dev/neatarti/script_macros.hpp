@@ -19,6 +19,7 @@
 #define TOMILS(var1) (((round (var1 * 6400 / 360)) + 6400) % 6400)
 
 #define CAN_BE_PARSED(var1) (IS_STRING(var1) && { parseNumber var1 != 0 && {[var1] call BIS_fnc_parseNumber != -1}  || {var1 == "0"} || {var1 == "-1"} })
+#define ROUND_NUMBER(NUMBER, DIGITS) (round (NUMBER * 10 ^ DIGITS) / 10 ^ DIGITS)
 
 #define RANGE(POS, TPOS) ((POS distance TPOS) * COORD_FACTOR)
 #define ELEV_DISC(V, R, H)  (V^4 - g * (g * R^2 + 2 * H * V^2))

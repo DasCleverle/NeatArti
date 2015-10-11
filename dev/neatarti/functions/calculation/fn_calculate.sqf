@@ -21,4 +21,10 @@ if(str _direction == UNDEF) then { _direction = -1; };
 if(str _time == UNDEF)      then { _time = -1; };
 if(str _time2 == UNDEF)     then { _time2 = -1; };
 
+_range =    ROUND_NUMBER(_range, 2);
+_elev =     ROUND_NUMBER(_elev,  2);
+_elev2 =    ROUND_NUMBER(_elev2, 2);
+_time =     ROUND_NUMBER(_time,  2);
+_time2 =    ROUND_NUMBER(_time2, 2);
+
 [[_range, _elev, _direction, _time], [_range, _elev2, _direction, _time2]];
