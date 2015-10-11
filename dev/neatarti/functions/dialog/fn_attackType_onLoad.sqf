@@ -27,3 +27,5 @@ _tbSolutionType ctrlAddEventHandler ["ToolBoxSelChanged", { _this spawn FUNC(set
 _tbSolutionType lbSetCurSel GVAR(solutionTypeIndex);
 
 [_lnbSolutions, GVAR(solutionType)] call FUNC(setSolutions);
+
+[_display] call FUNC(loadInputs);

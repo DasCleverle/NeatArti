@@ -40,6 +40,9 @@ class CfgFunctions {
             class setSolutionType {};
             class setSolutions {};
             class clearSolutions {};
+
+            class loadInputs {};
+            class saveInputs {};
         };
     };
 };
