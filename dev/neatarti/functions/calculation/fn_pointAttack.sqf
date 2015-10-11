@@ -8,4 +8,7 @@ _height = _targetHeight - GVAR(settingsHeight);
 _velocity = [RANGE(GVAR(settingsPos), _targetPos), _height, _magazine] call FUNC(getVelocity);
 _solutions = [_velocity, GVAR(settingsPos), _targetPos, _height] call FUNC(calculate);
 
+_solutions set [0, [_solutions select 0]];
+_solutions set [1, [_solutions select 1]];
+
 _solutions;

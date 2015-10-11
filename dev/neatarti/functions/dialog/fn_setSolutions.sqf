@@ -1,8 +1,17 @@
 #include "script_component.hpp"
 
-params ["_lnbSolutions", "_type", "_solutions"];
+params ["_lnbSolutions", "_type"];
 
-private ["_stringifedSolutions"];
+private ["_solutions", "_stringifedSolutions"];
+
+switch(_type) do {
+    case "H": {
+        _solutions = GVAR(solutionsHigh);
+    };
+    case "L": {
+        _solutions = GVAR(solutionsLow);
+    };
+};
 
 _stringifedSolutions = [];
 {

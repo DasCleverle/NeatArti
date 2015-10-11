@@ -35,5 +35,6 @@ GVAR(settingsWeapon) = 0;
 GVAR(attackType) = PAGES select 0;
 
 GVAR(solutionType) = SOLUTIONTYPES select 0;
+GVAR(solutionTypeIndex) = 0;
 GVAR(solutionsHigh) = [];
 GVAR(solutionsLow) = [];
