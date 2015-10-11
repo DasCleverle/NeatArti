@@ -6,16 +6,17 @@ private ["_inputs", "_errorState"];
 _inputs = [];
 _errorState = false;
 
-// standard inputs
+if(!GVAR(settingsSaved)) exitWith { SHOWERROR(_display, "Invalid operation: Settings missing."); };
+
 _targetPosX = ctrlText (_display displayCtrl IDC_TXT_TPOSX);
 _targetPosY = ctrlText (_display displayCtrl IDC_TXT_TPOSY);
 _targetHeight = ctrlText (_display displayCtrl IDC_TXT_THEIGHT);
 _magazine = lbCurSel (_display displayCtrl IDC_CMB_MAGAZINE);
 
-if(!CAN_BE_PARSED(_targetPosX))   exitWith { SHOWERROR(_display, "Invalid format: TPOS"); _inputs };
-if(!CAN_BE_PARSED(_targetPosY))   exitWith { SHOWERROR(_display, "Invalid format: TPOS"); _inputs };
-if(!CAN_BE_PARSED(_targetHeight)) exitWith { SHOWERROR(_display, "Invalid format: THEIGHT"); _inputs };
-if(_magazine == -1) exitWith { SHOWERROR(_display, "No magazine found."); _inputs };
+if(!CAN_BE_PARSED(_targetPosX))   exitWith { SHOWERROR(_display, "Invalid format: TPOS"); };
+if(!CAN_BE_PARSED(_targetPosY))   exitWith { SHOWERROR(_display, "Invalid format: TPOS"); };
+if(!CAN_BE_PARSED(_targetHeight)) exitWith { SHOWERROR(_display, "Invalid format: THEIGHT"); };
+if(_magazine == -1) exitWith { SHOWERROR(_display, "Invalid operation: No magazine found."); };
 
 _inputs pushBack [parseNumber _targetPosX, parseNumber _targetPosY];
 _inputs pushBack parseNumber _targetHeight;
@@ -43,6 +44,6 @@ switch(GVAR(attackType)) do {
     };
 };
 
-if(_errorState) exitWith { _inputs };
+if(_errorState) exitWith { };
 
 _inputs;

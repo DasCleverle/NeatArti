@@ -39,3 +39,5 @@ GVAR(magazineNames) = [];
         GVAR(magazineNames) pushBack getText(_config >> "displayName");
     };
 } foreach _magazines;
+
+GVAR(settingsSaved) = true;

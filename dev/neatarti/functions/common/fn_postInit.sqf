@@ -10,7 +10,6 @@ GVAR(magazineConfigs) = [];
 GVAR(magazineNames) = ["MISSING SETTING"];
 
 GVAR(modeConfigs) = [];
-GVAR(modesHash) = [] call CBA_fnc_hashCreate;
 
 {
     _displayName = getText(_x >> "displayName");
@@ -28,6 +27,7 @@ GVAR(modesHash) = [] call CBA_fnc_hashCreate;
     } foreach _weapons;
 } foreach GVAR(artyConfigs);
 
+GVAR(settingsSaved) = false;
 GVAR(settingsPos) = [0,0];
 GVAR(settingsHeight) = 0;
 GVAR(settingsWeapon) = 0;

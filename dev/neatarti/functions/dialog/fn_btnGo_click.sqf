@@ -7,6 +7,8 @@ private ["_display", "_inputs", "_solutions"];
 _display = ctrlParent _control;
 
 _inputs = [_display] call FUNC(getInputs);
+if(isNil "_inputs") exitWith {};
+
 _solutions = _inputs call (missionNamespace getVariable format ["%1_fnc_%2Attack", QUOTE(ADDON), GVAR(attackType)]);
 
 GVAR(solutionsHigh) = _solutions select 0;
