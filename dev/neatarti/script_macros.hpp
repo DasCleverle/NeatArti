@@ -5,13 +5,23 @@
 
 // Constants
 #define PAGES ["main", "point", "line", "area"]
+#define SOLUTIONTYPES ["H", "L"]
+#define COORDLEN 5
+#define COORD_FACTOR 1
+#define g 9.81
 
 // Functional macros
 #define DATAPATH(FILE) PATHTOF(data\FILE)
 #define QDATAPATH(FILE) QUOTE(DATAPATH(FILE))
 #define FUNCFILE(CLASS) PATHTOF(functions\CLASS)
 
-#define COORDPAD(var1) ([var1, "0", 5] call FUNC(padLeft))
+#define COORDPAD(var1) ([var1, "0", COORDLEN] call FUNC(padLeft))
+#define TOMILS(var1) (((round (var1 * 6400 / 360)) + 6400) % 6400)
+
+#define CAN_BE_PARSED(var1) (IS_STRING(var1) && { parseNumber var1 != 0 && {[var1] call BIS_fnc_parseNumber != -1}  || {var1 == "0"} || {var1 == "-1"} })
+
+#define RANGE(POS, TPOS) ((POS distance TPOS) * COORD_FACTOR)
+#define ELEV_DISC(V, R, H)  (V^4 - g * (g * R^2 + 2 * H * V^2))
 
 // Colors
 #define COLOR_TR 0,0,0,0
