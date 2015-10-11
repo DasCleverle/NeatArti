@@ -31,6 +31,13 @@
         text = TEXT; \
     }
 
+#define ERRORLABEL \
+    class lblError: GVAR(Label) { \
+        idc = IDC_TXT_ERROR; \
+        CELL(0, 17); \
+        CELLSPAN(7,1); \
+    }
+
 #define INPUT(ID, IDC, X, Y) \
     class txt##ID##: GVAR(TextBox) { \
         idc = IDC; \
@@ -57,8 +64,8 @@
     }
 
 #define SOLUTIONS(Y) \
-    class tbSolutionMode: GVAR(Toolbox) { \
-        idc = -4; \
+    class tbSolutionType: GVAR(Toolbox) { \
+        idc = IDC_TB_SOLUTIONTYPE; \
         rows = 1; \
         columns = 2; \
         strings[] = {"H", "L"}; \

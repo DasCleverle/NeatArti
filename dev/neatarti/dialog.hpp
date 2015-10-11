@@ -182,6 +182,8 @@ class GVAR(grpPoint): RscControlsGroupNoScrollbars {
         BUTTON(Back,IDC_BTN_BACK,2,4,"BACK");
 
         SOLUTIONS(5);
+
+        ERRORLABEL;
     };
 };
 
@@ -195,8 +197,8 @@ class GVAR(grpLine): RscControlsGroupNoScrollbars {
     class controls {
         HEADLINE("LINE ATTACK");
 
-        POS_INPUT(FromPosX,FromPosY,IDC_TXT_FROMPOSX,IDC_TXT_FROMPOSY,0,2,"FROMPOS");
-        LABELED_INPUT(FromHeight,IDC_TXT_FROMHEIGHT,2,2,"FROMHEIGHT");
+        POS_INPUT(FromPosX,FromPosY,IDC_TXT_TPOSX,IDC_TXT_TPOSX,0,2,"FROMPOS");
+        LABELED_INPUT(FromHeight,IDC_TXT_THEIGHT,2,2,"FROMHEIGHT");
         LABELED_COMBO(Magazine,IDC_CMB_MAGAZINE,3,2,"MAGAZINE");
 
         POS_INPUT(ToPosX,ToPosY,IDC_TXT_TOPOSX,IDC_TXT_TOPOSY,0,4,"TOPOS");
@@ -207,6 +209,8 @@ class GVAR(grpLine): RscControlsGroupNoScrollbars {
         BUTTON(Back,IDC_BTN_BACK,2,6,"BACK");
 
         SOLUTIONS(7);
+
+        ERRORLABEL;
     };
 };
 
@@ -231,6 +235,8 @@ class GVAR(grpArea): RscControlsGroupNoScrollbars {
         BUTTON(Back,IDC_BTN_BACK,2,6,"BACK");
 
         SOLUTIONS(7);
+
+        ERRORLABEL;
     };
 };
 

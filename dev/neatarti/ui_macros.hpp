@@ -26,6 +26,8 @@
 #define IDC_BTN_BACK            12464
 
 #define IDC_LNB_SOLUTIONS       12465
+#define IDC_LBL_ERROR           12466
+#define IDC_TB_SOLUTIONTYPE     12467
 
 // POINT ATTACK
 #define IDC_TXT_TPOSX           12501
@@ -83,5 +85,7 @@
 #define GUIMIN_2(var1, var2)            (((safezoneW / safezoneH) min var1) / var2)
 #define GUIMIN_3(var1, var2, var3)      (GUIMIN_2(var1, var2) / var3)
 #define GUIMIN_3_2(var1, var2)          GUIMIN_3(var1, var1, var2)
+
+#define SHOWERROR(display, error) ((display displayCtrl IDC_LBL_ERROR) ctrlSetText error)
 
 #include "ui_template.hpp"
