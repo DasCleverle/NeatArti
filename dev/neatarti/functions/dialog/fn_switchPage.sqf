@@ -25,7 +25,7 @@ if(!isNull _grpWrapper && {_animate}) then {
 };
 ctrlDelete _grpWrapper;
 
-GVAR(currentAttackType) = _type;
+GVAR(attackType) = _type;
 _type = format ["%1_grp%2", QUOTE(ADDON), _type];
 
 _grpWrapper = _display ctrlCreate [QGVAR(grpWrapper), IDC_GRP_WRAPPER];

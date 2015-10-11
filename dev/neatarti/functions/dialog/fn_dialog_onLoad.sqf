@@ -3,4 +3,4 @@
 disableSerialization;
 params ["_display"];
 
-[_display, GVAR(currentAttackType), false] call FUNC(switchPage);
+[_display, GVAR(attackType), false] call FUNC(switchPage);
