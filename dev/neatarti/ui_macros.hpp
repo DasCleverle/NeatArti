@@ -36,14 +36,9 @@
 #define IDC_TXT_THEIGHT         12503
 
 // LINE ATTACK
-#define IDC_TXT_FROMPOSX        12601
-#define IDC_TXT_FROMPOSY        12602
-#define IDC_TXT_FROMHEIGHT      12603
-
-#define IDC_TXT_TOPOSX          12604
-#define IDC_TXT_TOPOSY          12605
-
-#define IDC_TXT_COUNT           12606
+#define IDC_TXT_RANGE           12601
+#define IDC_TXT_DIRECTION       12602
+#define IDC_TXT_COUNT           12604
 
 // AREA ATTACK
 #define IDC_TXT_RADIUS          12701

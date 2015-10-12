@@ -196,11 +196,12 @@ class GVAR(grpLine): RscControlsGroupNoScrollbars {
     class controls {
         HEADLINE("LINE ATTACK");
 
-        POS_INPUT(FromPosX,FromPosY,IDC_TXT_TPOSX,IDC_TXT_TPOSX,0,2,"FROMPOS");
-        LABELED_INPUT(FromHeight,IDC_TXT_THEIGHT,2,2,"FROMHEIGHT");
+        POS_INPUT(FromPosX,FromPosY,IDC_TXT_TPOSX,IDC_TXT_TPOSY,0,2,"TPOS");
+        LABELED_INPUT(FromHeight,IDC_TXT_THEIGHT,2,2,"THEIGHT");
         LABELED_COMBO(Magazine,IDC_CMB_MAGAZINE,3,2,"MAGAZINE");
 
-        POS_INPUT(ToPosX,ToPosY,IDC_TXT_TOPOSX,IDC_TXT_TOPOSY,0,4,"TOPOS");
+        LABELED_INPUT(Range,IDC_TXT_RANGE,0,4,"RANGE");
+        LABELED_INPUT(Direction,IDC_TXT_DIRECTION,1,4,"DIR (deg)");
         LABELED_INPUT(Count,IDC_TXT_COUNT,2,4,"COUNT");
 
         BUTTON(Go,IDC_BTN_GO,0,6,"GO");
@@ -228,6 +229,7 @@ class GVAR(grpArea): RscControlsGroupNoScrollbars {
         LABELED_COMBO(Magazine,IDC_CMB_MAGAZINE,3,2,"MAGAZINE");
 
         LABELED_INPUT(Radius,IDC_TXT_RADIUS,0,4,"RADIUS");
+        LABELED_INPUT(Count,IDC_TXT_COUNT,1,4,"COUNT");
 
         BUTTON(Go,IDC_BTN_GO,0,6,"GO");
         BUTTON(Clear,IDC_BTN_CLEAR,1,6,"CLEAR");
