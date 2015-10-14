@@ -10,6 +10,8 @@ class CfgFunctions {
             class getVelocity {};
 
             class pointAttack {};
+            class lineAttack {};
+            class areaAttack {};
         };
 
         class common {
