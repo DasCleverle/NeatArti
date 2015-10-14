@@ -6,8 +6,12 @@
 // Constants
 #define PAGES ["main", "point", "line", "area"]
 #define SOLUTIONTYPES ["H", "L"]
+
 #define COORDLEN 5
 #define COORD_FACTOR 1
+
+#define LOAD_INTERVAL 0.01
+
 #define g 9.81
 
 // Functional macros

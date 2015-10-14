@@ -13,8 +13,6 @@ _lblLoading = _display displayCtrl IDC_LBL_LOADING;
 _pgbLoading ctrlShow true;
 _lblLoading ctrlShow true;
 
-#define LOAD_INTERVAL 0.01
-
 {
     _x params ["_time", "_text"];
     _lblLoading ctrlSetText _text;
