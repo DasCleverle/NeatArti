@@ -54,12 +54,13 @@ class GVAR(ButtonDummy): GVAR(Button) {
 
 class GVAR(Solutions): RscListNBox {
     idc = IDC_LNB_SOLUTIONS;
-    CELLSPAN(3, 8);
+    CELLSPAN(5, 8);
 
     STYLE;
     shadow = 0;
 
-    columns[] = {0, 3/32, 11/32, 35/64, 12/16};
+    //columns[] = {0, 3/32, 11/32, 35/64, 12/16};
+    columns[] = { 0, 4/64, 15/64, 21/64, 27/64, 33/64 };
     drawSideArrows = 0;
     idcLeft = -2;
     idcRight = -3;
@@ -180,7 +181,7 @@ class GVAR(grpPoint): RscControlsGroupNoScrollbars {
         BUTTON(Clear,IDC_BTN_CLEAR,1,4,"CLEAR");
         BUTTON(Back,IDC_BTN_BACK,2,4,"BACK");
 
-        SOLUTIONS(5);
+        SOLUTIONS(7);
 
         ERRORLABEL;
     };

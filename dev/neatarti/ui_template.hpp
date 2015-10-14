@@ -73,11 +73,6 @@
         CELL(0,Y); \
         CELLSPAN(2/3,1); \
     }; \
-    class lblMode: GVAR(Label) { \
-        idc = IDC_LBL_MODE; \
-        CELL(1,Y); \
-        CELLSPAN(3,1); \
-    }; \
     class btnDummyLeft: GVAR(ButtonDummy) { \
         idc = -2; \
     }; \
