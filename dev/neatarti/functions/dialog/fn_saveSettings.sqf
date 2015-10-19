@@ -4,7 +4,7 @@ disableSerialization;
 
 params ["_control"];
 
-private ["_display", "_weaponConfig", "_magazines", "_modes"];
+private ["_display", "_weaponConfig", "_magazines", "_modes", "_posX", "_posY", "_height"];
 _display = ctrlParent _control;
 
 _txtSettingsPosX = _display displayCtrl IDC_TXT_SETTINGS_POSX;
@@ -12,9 +12,17 @@ _txtSettingsPosY = _display displayCtrl IDC_TXT_SETTINGS_POSY;
 _txtSettingsHeight = _display displayCtrl IDC_TXT_SETTINGS_HEIGHT;
 _cmbSettingsWeapon = _display displayCtrl IDC_CMB_SETTINGS_ARTY;
 
-GVAR(settingsPos) = [parseNumber ctrlText _txtSettingsPosX, parseNumber ctrlText _txtSettingsPosY];
-GVAR(settingsHeight) = parseNumber ctrlText _txtSettingsHeight;
+_posX = ctrlText _txtSettingsPosX;
+_posY = ctrlText _txtSettingsPosY;
+_height = ctrlText _txtSettingsHeight;
+if(!CAN_BE_PARSED(_posX)) then { _posX = "0"; };
+if(!CAN_BE_PARSED(_posY)) then { _posY = "0"; };
+if(!CAN_BE_PARSED(_height)) then { _height = "0"; };
+
+GVAR(settingsPos) = [parseNumber _posX, [parseNumber _posY] call FUNC(correctY)];
+GVAR(settingsHeight) = parseNumber _height;
 GVAR(settingsWeapon) = lbCurSel _cmbSettingsWeapon;
+if(GVAR(settingsWeapon) == -1) then { GVAR(settingsWeapon) = 0; };
 
 [_display] call FUNC(loadSettings);
 

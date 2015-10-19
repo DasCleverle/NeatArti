@@ -18,6 +18,7 @@ class CfgFunctions {
             file = FUNCFILE(common);
             class postInit { postInit = 1; };
 
+            class correctY {};
             class padLeft {};
         };
 
