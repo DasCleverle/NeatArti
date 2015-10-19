@@ -177,11 +177,13 @@ class GVAR(grpPoint): RscControlsGroupNoScrollbars {
 
         LABELED_COMBO(Magazine,IDC_CMB_MAGAZINE,3,2,"MAGAZINE");
 
-        BUTTON(Go,IDC_BTN_GO,0,4,"GO");
-        BUTTON(Clear,IDC_BTN_CLEAR,1,4,"CLEAR");
-        BUTTON(Back,IDC_BTN_BACK,2,4,"BACK");
+        CORRECTIONS(3,4);
 
-        SOLUTIONS(7);
+        BUTTON(Go,IDC_BTN_GO,0,5,"GO");
+        BUTTON(Clear,IDC_BTN_CLEAR,1,5,"CLEAR");
+        BUTTON(Back,IDC_BTN_BACK,2,5,"BACK");
+
+        SOLUTIONS(6);
 
         ERRORLABEL;
     };
@@ -200,6 +202,8 @@ class GVAR(grpLine): RscControlsGroupNoScrollbars {
         POS_INPUT(FromPosX,FromPosY,IDC_TXT_TPOSX,IDC_TXT_TPOSY,0,2,"TPOS");
         LABELED_INPUT(FromHeight,IDC_TXT_THEIGHT,2,2,"THEIGHT");
         LABELED_COMBO(Magazine,IDC_CMB_MAGAZINE,3,2,"MAGAZINE");
+
+        CORRECTIONS(3,4);
 
         LABELED_INPUT(Range,IDC_TXT_RANGE,0,4,"RANGE");
         LABELED_INPUT(Direction,IDC_TXT_DIRECTION,1,4,"DIR (deg)");
@@ -228,6 +232,8 @@ class GVAR(grpArea): RscControlsGroupNoScrollbars {
         POS_INPUT(TPosX,TPosY,IDC_TXT_TPOSX,IDC_TXT_TPOSY,0,2,"TPOS");
         LABELED_INPUT(THeight,IDC_TXT_THEIGHT,2,2,"THEIGHT");
         LABELED_COMBO(Magazine,IDC_CMB_MAGAZINE,3,2,"MAGAZINE");
+
+        CORRECTIONS(3,4);
 
         LABELED_INPUT(Radius,IDC_TXT_RADIUS,0,4,"RADIUS");
         LABELED_INPUT(Count,IDC_TXT_COUNT,1,4,"COUNT");

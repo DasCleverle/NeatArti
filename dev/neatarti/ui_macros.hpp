@@ -30,6 +30,9 @@
 #define IDC_TB_SOLUTIONTYPE     12467
 #define IDC_LBL_MODE            12468
 
+#define IDC_TXT_CORR_NS         12469
+#define IDC_TXT_CORR_WE         12470
+
 // POINT ATTACK
 #define IDC_TXT_TPOSX           12501
 #define IDC_TXT_TPOSY           12502

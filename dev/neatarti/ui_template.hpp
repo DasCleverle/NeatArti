@@ -82,3 +82,8 @@
     class lnbSolutions: GVAR(Solutions) { \
         CELL(0,Y + 1); \
     }
+
+
+#define CORRECTIONS(X, Y) \
+    LABELED_INPUT(CorrNorthSouth,IDC_TXT_CORR_NS,X,Y,"CORR N/S"); \
+    LABELED_INPUT(CorrWestEast,IDC_TXT_CORR_WE,X+1,Y,"CORR W/E")
