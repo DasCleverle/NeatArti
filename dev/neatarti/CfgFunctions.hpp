@@ -51,5 +51,13 @@ class CfgFunctions {
             class openHudSolutions {};
             class closeHudSolutions {};
         };
+
+        class keybind {
+            file = FUNCFILE(keybind);
+
+            class openArtyCalc {};
+            class toggleHudSolutionsScroll {};
+            class toggleHudSolutions {};
+        };
     };
 };

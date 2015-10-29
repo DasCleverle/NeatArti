@@ -11,4 +11,4 @@ _lnbSolutions = (ctrlParent _control) displayCtrl IDC_LNB_SOLUTIONS;
 _lnbSolutions ctrlSetAutoScrollDelay 3;
 _lnbSolutions ctrlSetAutoScrollSpeed 0.5;
 _lnbSolutions ctrlSetAutoScrollRewind true;
-GVAR(hudScrolling) = true;
+GVAR(hudSolutionsScrolling) = true;
