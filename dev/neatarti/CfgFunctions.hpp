@@ -28,6 +28,7 @@ class CfgFunctions {
             class dialog_onLoad {};
             class main_onLoad {};
             class attackType_onLoad {};
+            class hudSolutions_onLoad {};
 
             class loadSettings {};
             class saveSettings {};
@@ -46,6 +47,9 @@ class CfgFunctions {
 
             class loadInputs {};
             class saveInputs {};
+
+            class openHudSolutions {};
+            class closeHudSolutions {};
         };
     };
 };

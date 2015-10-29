@@ -1,4 +1,6 @@
 // IDD and IDCs
+#define IDD_DISPLAYMISSION      46
+
 #define IDD_ARTICALC            12448
 #define IDC_GRP_WRAPPER         12449
 #define IDC_GRP_CONTENT         12450
@@ -28,7 +30,6 @@
 #define IDC_LNB_SOLUTIONS       12465
 #define IDC_LBL_ERROR           12466
 #define IDC_TB_SOLUTIONTYPE     12467
-#define IDC_LBL_MODE            12468
 
 #define IDC_TXT_CORR_NS         12469
 #define IDC_TXT_CORR_WE         12470
@@ -45,6 +46,9 @@
 
 // AREA ATTACK
 #define IDC_TXT_RADIUS          12701
+
+// HUD
+#define IDC_HUD_SOLUTIONS       12801
 
 // Constants
 #define DIALOG_X (safeZoneX + (safeZoneW - DIALOG_WIDTH) / 2)

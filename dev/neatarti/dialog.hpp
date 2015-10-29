@@ -7,6 +7,7 @@ class RscCombo;
 class RscListNBox;
 class RscToolbox;
 class RscProgress;
+class IGUIBack;
 
 class GVAR(Label): RscText {
     idc = -1;
@@ -59,7 +60,6 @@ class GVAR(Solutions): RscListNBox {
     STYLE;
     shadow = 0;
 
-    //columns[] = {0, 3/32, 11/32, 35/64, 12/16};
     columns[] = { 0, 4/64, 15/64, 21/64, 27/64, 33/64 };
     drawSideArrows = 0;
     idcLeft = -2;
@@ -268,3 +268,18 @@ class GVAR(dialogArticalc) {
     };
 };
 
+class GVAR(hudSolutions) : RscControlsGroupNoScrollbars {
+    idc = IDC_HUD_SOLUTIONS;
+    onLoad = _this spawn FUNC(hudSolutions_onLoad);
+
+    class controls {
+        class background: IGUIBack {
+            x = 0;
+            y = 0;
+            CELLSPAN(5,9);
+
+            colorBackground[] = {COLOR_WHITE_TR50};
+        };
+        SOLUTIONS(0);
+    };
+};
