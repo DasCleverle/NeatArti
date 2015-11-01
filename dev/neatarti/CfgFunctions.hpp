@@ -17,6 +17,8 @@ class CfgFunctions {
         class common {
             file = FUNCFILE(common);
             class postInit { postInit = 1; };
+            class initKeybind {};
+            class initYInvertion {};
 
             class correctY {};
             class padLeft {};
@@ -28,7 +30,6 @@ class CfgFunctions {
             class dialog_onLoad {};
             class main_onLoad {};
             class attackType_onLoad {};
-
 
             class loadSettings {};
             class saveSettings {};
