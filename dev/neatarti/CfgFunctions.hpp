@@ -22,6 +22,7 @@ class CfgFunctions {
 
             class correctY {};
             class padLeft {};
+            class rotate3D {};
         };
 
         class dialog {
@@ -54,6 +55,7 @@ class CfgFunctions {
             file = FUNCFILE(hud);
 
             class hudArtyInfo_onLoad {};
+            class pfhArtyInfo {};
             class hudSolutions_onLoad {};
 
             class openHud {};
@@ -64,6 +66,7 @@ class CfgFunctions {
             file = FUNCFILE(keybind);
 
             class openArtyCalc {};
+            class toggleArtyInfo {};
             class toggleHudSolutionsScroll {};
             class toggleHudSolutions {};
         };

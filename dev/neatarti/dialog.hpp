@@ -251,7 +251,6 @@ class GVAR(grpArea): RscControlsGroupNoScrollbars {
 class GVAR(grpWrapper): RscControlsGroupNoScrollbars {
     idc = IDC_GRP_WRAPPER;
     GRP_POS_DIM;
-
 };
 
 class GVAR(dialogArticalc) {
@@ -281,5 +280,50 @@ class GVAR(hudSolutions) : RscControlsGroupNoScrollbars {
             colorBackground[] = {COLOR_WHITE_TR50};
         };
         SOLUTIONS(0);
+    };
+};
+
+class GVAR(hudArtyInfo) : RscControlsGroupNoScrollbars {
+    idc = IDC_HUD_ARTYINFO;
+    onLoad = _this spawn FUNC(hudArtyInfo_onLoad);
+
+    x = safezoneX + safezoneW - 10 * GUIMIN_3_2(1.2, 25);
+    y = safezoneY + 8 * GUIMIN_3_2(1.2, 25);
+
+    class controls {
+        class background: IGUIBack {
+            x = 0;
+            y = 0;
+            CELLSPAN(3.5,4);
+
+            colorBackground[] = {COLOR_WHITE_TR50};
+        };
+
+        LABEL(Bank,0,0,"BANK");
+        LABEL(Elev,0,1,"ELEV");
+        LABEL(Dir,0,2,"DIR");
+        LABEL(Mode,0,3,"MODE");
+
+        class dlblBank: GVAR(Label) {
+            idc = IDC_DLBL_BANK;
+            text = "some value";
+            CELLSPAN(2.5,1);
+            CELL(1,0);
+        };
+
+        class dlblElev: dlblBank {
+            idc = IDC_DLBL_ELEV;
+            CELL(1,1);
+        };
+
+        class dlblDir: dlblBank {
+            idc = IDC_DLBL_DIR;
+            CELL(1,2);
+        };
+
+        class dlblMode: dlblBank {
+            idc = IDC_DLBL_MODE;
+            CELL(1,3);
+        };
     };
 };

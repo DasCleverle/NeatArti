@@ -49,6 +49,13 @@
 
 // HUD
 #define IDC_HUD_SOLUTIONS       12801
+#define IDC_HUD_ARTYINFO        12802
+
+// Arty Info
+#define IDC_DLBL_BANK           12901
+#define IDC_DLBL_ELEV           12902
+#define IDC_DLBL_DIR            12903
+#define IDC_DLBL_MODE           12904
 
 // Constants
 #define DIALOG_X (safeZoneX + (safeZoneW - DIALOG_WIDTH) / 2)

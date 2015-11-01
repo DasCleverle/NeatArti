@@ -9,7 +9,7 @@ _elev = atan((_velocity^2 + sqrt(ELEV_DISC(_velocity, _range, _height))) / (g * 
 _elev2 = atan((_velocity^2 - sqrt(ELEV_DISC(_velocity, _range, _height))) / (g * _range));
 
 _direction = [_pos, _targetPos] call BIS_fnc_dirTo;
-//_direction = TOMILS(_direction);
+_direction = TOMILS(_direction);
 
 _time = (_velocity * sin _elev + sqrt((_velocity * sin _elev) ^ 2 + 2 * g * abs _height)) / (g);
 _time2 = (_velocity * sin _elev2 + sqrt((_velocity * sin _elev2) ^ 2 + 2 * g * abs _height)) / (g);
