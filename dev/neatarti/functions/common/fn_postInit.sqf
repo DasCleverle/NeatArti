@@ -41,7 +41,7 @@ GVAR(solutionsHigh) = [];
 GVAR(solutionsLow) = [];
 
 GVAR(hudSolutionsScrolling) = false;
-GVAR(hudSolutionsVisible) = false;
+GVAR(visibleHuds) = [];
 
 private ["_gridOrigin", "_gridStep", "_yOrigin", "_yStep"];
 _gridOrigin = mapGridPosition [0,0];
@@ -64,6 +64,6 @@ if((parseNumber _yOrigin) > (parseNumber _yStep)) then {
 
 private ["_addonName"];
 _addonName = "Neat Artillery";
-[_addonName, QUOTE(GVAR(openArtyCalc)), "Open Artillery Calculator", { true }, FUNC(openArtyCalc), [DIK_J, [false, false, true]]] call CBA_fnc_addKeybind;
-[_addonName, QUOTE(GVAR(toggleHudSolutions)), "Toggle Solution-Info", { true }, FUNC(toggleHudSolutions), [DIK_H, [false, false, true]]] call CBA_fnc_addKeybind;
-[_addonName, QUOTE(GVAR(toggleHudSolutionsScroll)), "Toggle Solution-Info scrolling", { true }, FUNC(toggleHudSolutionsScroll), [DIK_H, [false, true, false]]] call CBA_fnc_addKeybind;
+[_addonName, QGVAR(openArtyCalc), "Open Artillery Calculator", { true }, FUNC(openArtyCalc), [DIK_J, [false, false, true]]] call CBA_fnc_addKeybind;
+[_addonName, QGVAR(toggleHudSolutions), "Toggle Solution-Info", { true }, FUNC(toggleHudSolutions), [DIK_H, [false, false, true]]] call CBA_fnc_addKeybind;
+[_addonName, QGVAR(toggleHudSolutionsScroll), "Toggle Solution-Info scrolling", { true }, FUNC(toggleHudSolutionsScroll), [DIK_H, [false, true, false]]] call CBA_fnc_addKeybind;

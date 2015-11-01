@@ -2,4 +2,4 @@
 
 if(dialog) exitWith {};
 
-createDialog QUOTE(GVAR(dialogArticalc));
+createDialog QGVAR(dialogArticalc);

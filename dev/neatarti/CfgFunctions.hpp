@@ -52,10 +52,11 @@ class CfgFunctions {
         class hud {
             file = FUNCFILE(hud);
 
+            class hudArtyInfo_onLoad {};
             class hudSolutions_onLoad {};
 
-            class openHudSolutions {};
-            class closeHudSolutions {};
+            class openHud {};
+            class closeHud {};
         };
 
         class keybind {

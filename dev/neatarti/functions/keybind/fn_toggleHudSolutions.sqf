@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 
-if(GVAR(hudSolutionsVisible)) then {
-    call FUNC(closeHudSolutions);
+if(QGVAR(hudSolutions) in GVAR(visibleHuds)) then {
+    [QGVAR(hudSolutions), IDC_HUD_SOLUTIONS] call FUNC(closeHud);
 }
 else {
-    call FUNC(openHudSolutions);
+    [QGVAR(hudSolutions), IDC_HUD_SOLUTIONS] call FUNC(openHud);
 };
 
 true;
