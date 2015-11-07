@@ -12,5 +12,6 @@ class CfgPatches {
     };
 };
 
+#include "CfgWeapons.hpp"
 #include "CfgFunctions.hpp"
 #include "dialog.hpp"

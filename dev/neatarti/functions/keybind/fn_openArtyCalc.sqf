@@ -1,5 +1,5 @@
 #include "script_component.hpp"
 
-if(dialog) exitWith {};
+if(dialog || { !(QGVAR(calculator) in items player) }) exitWith {};
 
 createDialog QGVAR(dialogArticalc);
