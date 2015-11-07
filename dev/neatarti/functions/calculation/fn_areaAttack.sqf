@@ -12,7 +12,7 @@ for "_i" from 0 to _count - 1 do {
 
     while { _direction >= 360 } do { _direction = _direction - 360; };
 
-    _range = _radius / (((_count / PER_ROTATION) + 1) / (ceil ((_i + 1) / 6) max 1));
+    _range = _radius / (((_count / PER_ROTATION) + 1) / (ceil ((_i + 1) / PER_ROTATION) max 1));
     _target = [_targetPos, _range, _direction] call BIS_fnc_relPos;
     _modeVelocity = [RANGE(GVAR(settingsPos), _target), _height, _magazine] call FUNC(getModeAndVelocity);
     _solution = [_modeVelocity select 1, GVAR(settingsPos), _target, _height] call FUNC(calculate);

@@ -9,6 +9,10 @@ _yStep = _gridStep select [3,5];
 
 GVAR(YInvertionWeight) = 0;
 
+if(!CAN_BE_PARSED(_yOrigin) || { !CAN_BE_PARSED(_yStep) }) exitWith {
+    diag_log "[NeatArti] Current Map is not compatible with Neat Artillery. Errors occuring are likely to not be bugs.";
+};
+
 if((parseNumber _yOrigin) > (parseNumber _yStep)) then {
     _mapSize = getNumber(configFile >> "CfgWorlds" >> worldName >> "mapSize");
 

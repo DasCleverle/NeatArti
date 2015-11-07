@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 if !(QGVAR(hudArtyInfo) in GVAR(visibleHuds)) exitWith {};
+if (vehicle player == player) exitWith { [QGVAR(hudArtyInfo), IDC_HUD_ARTYINFO] call FUNC(closeHud); };
 
 private ["_vehicle", "_vectorUp", "_weaponDir", "_bank", "_elev", "_dir", "_mode"];
 
