@@ -55,7 +55,7 @@ class GVAR(ButtonDummy): GVAR(Button) {
 
 class GVAR(Solutions): RscListNBox {
     idc = IDC_LNB_SOLUTIONS;
-    CELLSPAN(5, 8);
+    CELLSPAN(5, 7);
 
     STYLE;
     shadow = 0;
@@ -159,6 +159,8 @@ class GVAR(grpMain): RscControlsGroupNoScrollbars {
             CELL(2,7);
             CELLSPAN(3,1);
         };
+
+        ERRORLABEL;
     };
 };
 
@@ -271,6 +273,10 @@ class GVAR(hudSolutions) : RscControlsGroupNoScrollbars {
     idc = IDC_HUD_SOLUTIONS;
     onLoad = _this spawn FUNC(hudSolutions_onLoad);
 
+    x = safezoneX + 3/4 * GUIMIN_3_2(1.2, 25);
+    y = safezoneY + safezoneH - 9 * (CELL_HEIGHT + 4/3 * CELL_MARGIN) - 1 * GUIMIN_3_2(1.2, 25);
+
+
     class controls {
         class background: IGUIBack {
             x = 0;
@@ -279,7 +285,7 @@ class GVAR(hudSolutions) : RscControlsGroupNoScrollbars {
 
             colorBackground[] = {COLOR_WHITE_TR50};
         };
-        SOLUTIONS(0);
+        SOLUTIONS(0.5);
     };
 };
 
@@ -289,6 +295,7 @@ class GVAR(hudArtyInfo) : RscControlsGroupNoScrollbars {
 
     x = safezoneX + safezoneW - 10 * GUIMIN_3_2(1.2, 25);
     y = safezoneY + 8 * GUIMIN_3_2(1.2, 25);
+    CELLSPAN(3.5,4);
 
     class controls {
         class background: IGUIBack {
@@ -306,7 +313,6 @@ class GVAR(hudArtyInfo) : RscControlsGroupNoScrollbars {
 
         class dlblBank: GVAR(Label) {
             idc = IDC_DLBL_BANK;
-            text = "some value";
             CELLSPAN(2.5,1);
             CELL(1,0);
         };

@@ -34,7 +34,7 @@
 #define ERRORLABEL \
     class lblError: GVAR(Label) { \
         idc = IDC_LBL_ERROR; \
-        CELL(0, 14); \
+        CELL(0, 14.7); \
         CELLSPAN(7,1); \
     }
 
