@@ -20,8 +20,8 @@ _correctionWE = ctrlText (_display displayCtrl IDC_TXT_CORR_WE);
 if(_correctionNS == "") then { _correctionNS = "0"; };
 if(_correctionWE == "") then { _correctionWE = "0"; };
 
-if(!CAN_BE_PARSED(_targetPosX))   exitWith { SHOWERROR(_display, "Invalid format: TPOS"); };
-if(!CAN_BE_PARSED(_targetPosY))   exitWith { SHOWERROR(_display, "Invalid format: TPOS"); };
+if(!COORD_IS_VALID(_targetPosX))   exitWith { SHOWERROR(_display, "Invalid format: TPOS"); };
+if(!COORD_IS_VALID(_targetPosY))   exitWith { SHOWERROR(_display, "Invalid format: TPOS"); };
 if(!CAN_BE_PARSED(_targetHeight)) exitWith { SHOWERROR(_display, "Invalid format: THEIGHT"); };
 if(_magazine == -1) exitWith { SHOWERROR(_display, "Invalid operation: No magazine found."); };
 

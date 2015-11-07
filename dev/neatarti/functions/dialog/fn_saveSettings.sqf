@@ -15,9 +15,9 @@ _cmbSettingsWeapon = _display displayCtrl IDC_CMB_SETTINGS_ARTY;
 _posX = ctrlText _txtSettingsPosX;
 _posY = ctrlText _txtSettingsPosY;
 _height = ctrlText _txtSettingsHeight;
-if(!CAN_BE_PARSED(_posX)) then { _posX = "0"; };
-if(!CAN_BE_PARSED(_posY)) then { _posY = "0"; };
-if(!CAN_BE_PARSED(_height)) then { _height = "0"; };
+if(!CAN_BE_PARSED(_posX)) exitWith { SHOWERROR(_display, "Invalid Format: POS") };
+if(!CAN_BE_PARSED(_posY)) exitWith { SHOWERROR(_display, "Invalid Format: POS") };
+if(!CAN_BE_PARSED(_height)) exitWith { SHOWERROR(_display, "Invalid Format: HEIGHT") };
 
 GVAR(settingsPos) = [parseNumber _posX, [parseNumber _posY] call FUNC(correctY)];
 GVAR(settingsHeight) = parseNumber _height;

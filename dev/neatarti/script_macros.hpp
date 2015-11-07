@@ -22,7 +22,9 @@
 #define COORDPAD(var1) ([var1, "0", COORDLEN] call FUNC(padLeft))
 #define TOMILS(var1) (((round (var1 * 6400 / 360)) + 6400) % 6400)
 
-#define CAN_BE_PARSED(var1) (IS_STRING(var1) && { parseNumber var1 != 0 && {[var1] call BIS_fnc_parseNumber != -1}  || {(([var1] call CBA_fnc_trim) select [0,1]) == "0"} || {var1 == "-1"} })
+#define UNICODE_ZERO 48
+#define CAN_BE_PARSED(var1) (IS_STRING(var1) && { parseNumber var1 != 0 || { count var1 == ({ _x == UNICODE_ZERO } count toArray var1)}})
+#define COORD_IS_VALID(var1) (CAN_BE_PARSED(var1) && { count var1 == COORDLEN })
 #define ROUND_NUMBER(NUMBER, DIGITS) (round (NUMBER * 10 ^ DIGITS) / 10 ^ DIGITS)
 
 #define RANGE(POS, TPOS) ((POS distance TPOS) * COORD_FACTOR)
