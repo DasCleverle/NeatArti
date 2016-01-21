@@ -7,9 +7,10 @@
 #define MAINAUTHOR "[W] DasCleverle"
 #define AUTHORS MAINAUTHOR
 
-#define MAJOR 1
+#define MAJOR 2
 #define MINOR 0
 #define PATCHLVL 0
+#define DEV 1
 #define DEV 1
 
 #ifdef DEV
