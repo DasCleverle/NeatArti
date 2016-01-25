@@ -15,5 +15,6 @@ GVAR(solutionsHigh) = _solutions select 0;
 GVAR(solutionsLow) =  _solutions select 1;
 
 [_display displayCtrl IDC_LNB_SOLUTIONS, GVAR(solutionType)] call FUNC(setSolutions);
+[(findDisplay IDD_DISPLAYMISSION) displayCtrl IDC_LNB_SOLUTIONS, GVAR(solutionType)] call FUNC(setSolutions);
 
 [_display] call FUNC(saveInputs);
