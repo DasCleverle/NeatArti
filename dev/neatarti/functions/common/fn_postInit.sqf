@@ -43,6 +43,7 @@ GVAR(hudSolutionsScrolling) = false;
 GVAR(visibleHuds) = [];
 
 [FUNC(pfhArtyInfo), 0, []] call CBA_fnc_addPerFrameHandler;
+[FUNC(pfhLooksAtSky), 0, []] call CBA_fnc_addPerFrameHandler;
 
 call FUNC(initYInvertion);
 call FUNC(initKeybind);

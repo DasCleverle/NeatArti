@@ -23,6 +23,8 @@ class CfgFunctions {
             class correctY {};
             class padLeft {};
             class rotate3D {};
+
+            class pfhLooksAtSky {};
         };
 
         class dialog {
